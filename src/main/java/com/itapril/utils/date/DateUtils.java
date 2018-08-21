@@ -23,8 +23,13 @@ public class DateUtils {
             throw new IllegalArgumentException("minutes < 0 or minutes > 24");
         }
         DateTime nowDate = new DateTime(new Date());
+        System.out.println(nowDate);
+        System.out.println(nowDate.getMillis());
         DateTime afterDate = nowDate.plusHours(hours)
                                     .plusMinutes(minutes);
+        System.out.println(afterDate);
+        System.out.println(afterDate.getMillis());
+
         return afterDate.getMillis();
     }
 

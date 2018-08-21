@@ -37,7 +37,7 @@ public class DateTest {
         dateTime = new DateTime(new Date());
         System.out.println( "--> " + dateTime);
 
-        DateUtils.getFutureMinutesTime(-3,6);
+        DateUtils.getFutureMinutesTime(0,1);
 
     }
 

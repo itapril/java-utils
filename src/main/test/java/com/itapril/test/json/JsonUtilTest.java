@@ -1,5 +1,6 @@
 package com.itapril.test.json;
 
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.itapril.utils.json.JsonUtil;
 import org.junit.Test;
@@ -27,6 +28,7 @@ public class JsonUtilTest {
         user.setUserName("hello");
         String userJsonString = JsonUtil.toJsonString(user);
         System.out.println("============ the user json string is \n" + userJsonString);
+        JSONObject jsonObject = JSONObject.parseObject(userJsonString);
 
         //将json解析成User对象
         //json 串中的对象 需要跟User中的对象字段一致，有的就解析 没有就不解析
